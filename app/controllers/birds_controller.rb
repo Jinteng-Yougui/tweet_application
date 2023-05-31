@@ -7,7 +7,13 @@ class BirdsController < ApplicationController
   end
 
   def create
-    Bird.create(content: params[:bird][:content])
+    Bird.create(bird_params)
     redirect_to new_bird_path
+  end
+
+  private
+
+  def bird_params
+    param.require(:bird).permit(:content)
   end
 end
