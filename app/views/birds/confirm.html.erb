@@ -1,0 +1,10 @@
+<h3>以下の内容でつぶやきを送信する。</h3>
+
+<%= form_with(model: @bird, url: birds_path, local: true) do |form| %>
+  <%= form.hidden_field :content %>
+
+  <p>つぶやき<%= @bird.content %></p>
+  <%= form.submit "つぶやく" %>
+
+<%= form.submit "戻る", name: 'back' %>
+<% end %>

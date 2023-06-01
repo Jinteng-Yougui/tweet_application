@@ -1,0 +1,22 @@
+<table>
+  <%= form_with(model: @bird, local: true, url: confirm_birds_path) do |form| %>
+    <% if @bird.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= @bird.errors.count %>件のエラーがあります。</h2>
+        <ul>
+        <% @bird.errors.full_messages.each do |msg| %>
+          <li><%= msg %><li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="bird_posts">
+    <%= form.label :content %>
+    <%= form.text_field :content%>
+    </div>
+  <%= form.submit %>
+  <% end %>
+</table>
+
+<%= link_to "つぶやき一覧に戻る", birds_path %>

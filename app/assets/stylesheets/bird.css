@@ -17,11 +17,20 @@ header h1 {
   color: deepskyblue;
 }
 
-table {
+table a {
   text-align:center;
-  width: 100%;
+  /* width: 100%; */
   position: relative;
   color: lightskyblue;
+}
+
+table {
+  text-align:center;
+  width: 100%; 
+  position: relative;
+  color: lightskyblue;
+  margin-left: 150px;
+  margin-right: 150px;
 }
 
 footer {
