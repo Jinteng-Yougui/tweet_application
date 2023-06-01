@@ -1,0 +1,47 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  text-align: center;
+}
+
+.main-header {
+  padding-bottom: 15%;
+  width: 100%;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+}
+
+header {
+  background-color: pink;
+  height: 50px;
+  font-size: 15px;
+}
+
+header ul {
+  margin: 0;
+  padding: 0;
+}
+
+header ul a {
+  display:block;
+  color: #fff;
+  text-decoration: none;
+}
+
+footer {
+height: 70px;
+width: 100%;
+background-color: pink;
+position: absolute;
+}
+
+footer p {
+vertical-align: middle;
+text-align: center;
+color: #fff;
+font-size: 0.8rem;
+}
