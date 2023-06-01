@@ -20,6 +20,19 @@ class BirdsController < ApplicationController
     @bird = Bird.find(params[:id])
   end
 
+  def edit
+    @bird = Bird.find(params[:id])
+  end
+  
+  def update
+    @bird = Bird.find(params[:id])
+    if @bird.update(bird_params)
+      redirect_to birds_path, notice: "編集できました。"
+    else
+      render :edit
+    end
+  end
+
   private
 
   def bird_params

@@ -4,10 +4,9 @@
     <td><%= bird.content %></td>
 
     <td><%= link_to 'つぶやいた内容を確認する', bird_path(bird.id) %></td>
+    <td><%= link_to "つぶやいた内容を編集する", edit_bird_path(bird.id) %></td>
   </tr>
 <% end %>
 </table>
-
-<br>
 
 <%= link_to '新規つぶやき', new_bird_path %>

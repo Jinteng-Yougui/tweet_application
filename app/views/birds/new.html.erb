@@ -1,5 +1,16 @@
 <table>
   <%= form_with(model: @bird, local: true) do |form| %>
+    <% if @bird.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= @bird.errors.count %>件のエラーがあります。</h2>
+        <ul>
+        <% @bird.errors.full_messages.each do |msg| %>
+          <li><%= msg %><li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
     <div class="bird_posts">
     <%= form.label :content %>
     <%= form.text_field :content%>
