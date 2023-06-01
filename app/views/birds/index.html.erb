@@ -1,23 +1,13 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Blue_Bird</title>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/bird.css">
-</head>
-
-<h1>つぶやき一覧</h1>
-
 <table>
-  <tr>
-    <th>つぶやき</th>
-  </tr>
-
-<% @birds.each do |bird|%>
+<% @birds.each do |bird| %>
   <tr>
     <td><%= bird.content %></td>
+
+    <td><%= link_to 'つぶやいた内容を確認する', bird_path(bird.id) %></td>
   </tr>
 <% end %>
 </table>
+
+<br>
+
+<%= link_to '新規つぶやき', new_bird_path %>

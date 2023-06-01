@@ -7,29 +7,21 @@ body {
   text-align: center;
 }
 
-.main-header {
-  padding-bottom: 15%;
-  width: 100%;
-  background-size: cover;
-  background-attachment: fixed;
-  position: relative;
-}
-
 header {
   background-color: pink;
   height: 50px;
   font-size: 15px;
 }
 
-header ul {
-  margin: 0;
-  padding: 0;
+header h1 {
+  color: deepskyblue;
 }
 
-header ul a {
-  display:block;
-  color: #fff;
-  text-decoration: none;
+table {
+  text-align:center;
+  width: 100%;
+  position: relative;
+  color: lightskyblue;
 }
 
 footer {
